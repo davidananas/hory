@@ -4,11 +4,14 @@ input.onButtonPressed(Button.A, function () {
             Hory = 9
             basic.showString("" + (textový_seznam[Hory]))
         } else {
-            Hory += 1
-            basic.showString("" + (textový_seznam[Hory]))
+            if (Nej == 20) {
+                Hory += 1
+                basic.showString("" + (seznam[Hory]))
+            } else {
+                Hory += 1
+                basic.showString("" + (textový_seznam[Hory]))
+            }
         }
-    } else {
-    	
     }
 })
 input.onButtonPressed(Button.AB, function () {
@@ -25,6 +28,7 @@ input.onButtonPressed(Button.AB, function () {
         basic.showString("HORY 2")
         if (Nej == 0) {
             Nej = 20
+            basic.showString("" + (seznam[Hory]))
         }
     }
 })
@@ -35,6 +39,7 @@ input.onButtonPressed(Button.B, function () {
             basic.showString("" + (textový_seznam[Hory]))
         } else {
             if (Nej == 20) {
+                Hory += -1
                 basic.showString("" + (seznam[Hory]))
             } else {
                 Hory += -1
